@@ -1,5 +1,21 @@
+@font-face {
+  font-family: 'VCHenrietta';
+  src: url('https://www.cinnabon.com/assets/fonts/font_VCHenrietta-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap
+}
+
+@font-face {
+  font-family: 'VCHenrietta';
+  src: url('https://www.cinnabon.com/assets/fonts/font_VCHenrietta-Medium.otf') format('opentype');
+  font-style: normal;
+  font-weight: 500 800;
+  font-display: swap
+}
+
 :root {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   color: #121E48;
   background: #FFFFFF;
   font-synthesis: none;
@@ -11,7 +27,7 @@
   --brown-2: #071D49;
   --caramel: #67CBC9;
   --line: rgba(18, 30, 72, .18);
-  --serif: 'Playfair Display', Georgia, serif
+  --serif: 'VCHenrietta', Georgia, serif
 }
 
 * {
@@ -230,7 +246,7 @@ button {
 }
 
 .mobile-link span:last-child {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 22px
 }
 
@@ -379,7 +395,7 @@ button {
 .hero-photo {
   position: absolute;
   inset: 0 0 18px 0%;
-  background: #E5F7F6 url('./hero-photo.png') 85%/cover no-repeat;
+  background: #E5F7F6 url('/hero-photo.png') 85%/cover no-repeat;
   filter: saturate(1)
 }
 
@@ -416,15 +432,69 @@ button {
 
 .hero-caption {
   position: absolute;
-  bottom: 0;
+  bottom: -5%;
   right: 0;
   left: 7%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 10px;
   font-size: 9px;
   letter-spacing: .1em;
   text-transform: uppercase;
   color: #53617F
+}
+
+.hero-caption-copy,
+.hero-slider-controls {
+  display: flex;
+  align-items: center
+}
+
+.hero-caption-copy {
+  gap: 15px
+}
+
+.hero-slider-controls {
+  gap: 7px;
+  flex-shrink: 0
+}
+
+.hero-arrow {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--brown);
+  font-size: 17px;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s
+}
+
+.hero-arrow:hover {
+  border-color: var(--brown);
+  background: var(--brown);
+  color: var(--paper)
+}
+
+.hero-arrow:focus-visible {
+  outline: 2px solid var(--caramel);
+  outline-offset: 3px
+}
+
+.hero-photo {
+  touch-action: pan-y
+}
+
+.hero-photo[data-slide="2"] {
+  background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=85')
+}
+
+.hero-photo[data-slide="3"] {
+  background-image: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=85')
 }
 
 .hero-bottom-label {
@@ -861,7 +931,7 @@ button {
   }
 
   .hero h1 {
-    font-size: 135px
+    font-size: 124px
   }
 
   .hero-visual {
@@ -1148,6 +1218,20 @@ button {
   .hero-caption {
     left: 6%;
     font-size: 8px
+  }
+
+  .hero-caption-copy {
+    gap: 8px
+  }
+
+  .hero-slider-controls {
+    gap: 5px
+  }
+
+  .hero-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 15px
   }
 
   .hero-bottom-label {

@@ -8,10 +8,11 @@
   <meta name="description"
     content="Свежие булочки с корицей и ароматный кофе в центре Макеевки. Загляните за маленьким удовольствием." />
   <title>Синаман — булочки и кофе в Макеевке</title>
+  <link rel="preconnect" href="https://www.cinnabon.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
 </head>
 
@@ -50,20 +51,30 @@
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"> ТЁПЛЫЕ МОМЕНТЫ НАЧИНАЮТСЯ ЗДЕСЬ</p>
-        <h1 id="hero-title">Счастье<br />с корицей<span class="period">.</span></h1>
-        <p class="hero-description">Нежное тесто, ароматная корица и мягкая глазурь. Плюс чашечка любимого кофе — и день
-          уже чуточку лучше.</p>
+        <p class="eyebrow" id="hero-eyebrow">ТЁПЛЫЕ МОМЕНТЫ НАЧИНАЮТСЯ ЗДЕСЬ</p>
+        <h1 id="hero-title"><span id="hero-title-first">Счастье</span><br /><span
+            id="hero-title-second">с корицей</span><span class="period">.</span></h1>
+        <p class="hero-description" id="hero-description">Нежное тесто, ароматная корица и мягкая глазурь. Плюс чашечка
+          любимого кофе — и день уже чуточку лучше.</p>
         <div class="hero-actions"><a class="button button-dark" href="#menu">Выбрать любимое <span
               aria-hidden="true">↗</span></a><a class="text-link" href="#visit">Найти нас <span
               aria-hidden="true">↓</span></a></div>
         <div class="hero-note"><span class="note-line"></span><span>Испечено с любовью<br />для вашего хорошего
             дня</span></div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-photo" role="img" aria-label="Свежие булочки с корицей и глазурью"></div>
+      <div class="hero-visual" role="group" aria-roledescription="слайдер" aria-label="Истории Синаман">
+        <div class="hero-photo" data-slide="1" role="img" aria-label="Свежие булочки с корицей и глазурью"></div>
         <div class="photo-sticker"><span>BAKED</span><strong>with<br />love</strong><span>EVERY DAY</span></div>
-        <div class="hero-caption"><span>01 / 03</span><span>Только что из печи</span></div>
+        <div class="hero-caption">
+          <div class="hero-caption-copy">
+            <span id="hero-slide-count" aria-live="polite">01 / 03</span>
+            <span id="hero-slide-caption">Только что из печи</span>
+          </div>
+          <div class="hero-slider-controls">
+            <button class="hero-arrow" type="button" data-slide-direction="-1" aria-label="Предыдущий слайд">←</button>
+            <button class="hero-arrow" type="button" data-slide-direction="1" aria-label="Следующий слайд">→</button>
+          </div>
+        </div>
       </div>
       <div class="hero-bottom-label">СЛАДКАЯ ПАУЗА В ТВОЁМ ДНЕ </div>
     </section>
