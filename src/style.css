@@ -64,7 +64,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: .12em;
   text-transform: uppercase
 }
@@ -120,13 +120,13 @@ button {
 
 .brand-copy strong {
   font-family: var(--serif);
-  font-size: 23px;
+  font-size: 24px;
   letter-spacing: .07em;
   line-height: 1
 }
 
 .brand-copy small {
-  font-size: 7px;
+  font-size: 8px;
   letter-spacing: .17em;
   font-weight: 700
 }
@@ -139,7 +139,7 @@ button {
 
 .desktop-nav a,
 .header-phone {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600
 }
 
@@ -227,7 +227,7 @@ button {
 }
 
 .eyebrow {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: .16em;
   font-weight: 700;
   line-height: 1.6;
@@ -296,7 +296,7 @@ button {
 .visit-copy h2 {
   font-family: var(--serif);
   font-weight: 600;
-  letter-spacing: -.065em;
+  letter-spacing: -.0055em;
   line-height: .93;
   margin: 0
 }
@@ -312,8 +312,8 @@ button {
 
 .hero-description {
   max-width: 380px;
-  margin: 28px 0 26px;
-  font-size: 14px;
+  margin: 38px 0 26px;
+  font-size: 19px;
   line-height: 1.9;
   color: #53617F
 }
@@ -333,7 +333,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 27px;
-  font-size: 11px;
+  font-size: 19px;
   font-weight: 700;
   transition: background .2s, color .2s, transform .2s
 }
@@ -357,7 +357,7 @@ button {
 }
 
 .text-link {
-  font-size: 11px;
+  font-size: 17px;
   font-weight: 700;
   border-bottom: 1px solid var(--brown);
   padding: 0 0 6px;
@@ -367,7 +367,7 @@ button {
 }
 
 .text-link span {
-  font-size: 15px
+  font-size: 17px
 }
 
 .hero-note {
@@ -375,7 +375,7 @@ button {
   align-items: center;
   gap: 14px;
   margin-top: clamp(45px, 7vh, 82px);
-  font-size: 10px;
+  font-size: 17px;
   line-height: 1.7;
   color: #53617F
 }
@@ -439,7 +439,7 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: .1em;
   text-transform: uppercase;
   color: #53617F
@@ -501,7 +501,7 @@ button {
   position: absolute;
   bottom: 22px;
   left: 5.5%;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: .16em;
   font-weight: 700;
   display: flex;
@@ -515,7 +515,7 @@ button {
 }
 
 .section-pad {
-  padding: 110px 7%
+  padding: 50px 7% 110px
 }
 
 .menu-section {
@@ -550,7 +550,7 @@ button {
   max-width: 300px;
   margin: 0 0 5px;
   color: #53617F;
-  font-size: 13px;
+  font-size: 17px;
   line-height: 1.9
 }
 
@@ -593,7 +593,7 @@ button {
   justify-content: space-between;
   gap: 10px;
   margin-top: 21px;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: .13em;
   color: #121E48;
   font-weight: 700
@@ -605,14 +605,14 @@ button {
 
 .product-card h3 {
   font-family: var(--serif);
-  font-size: clamp(21px, 2vw, 28px);
+  font-size: clamp(21px, 2vw, 31px);
   font-weight: 600;
   letter-spacing: -.035em;
   margin: 12px 0 8px
 }
 
 .product-card>p {
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.8;
   color: #53617F;
   max-width: 290px;
@@ -629,7 +629,7 @@ button {
 }
 
 .product-price {
-  font-size: 10px;
+  font-size: 15px;
   color: #53617F
 }
 
@@ -692,7 +692,7 @@ button {
 }
 
 .story-copy>p:not(.eyebrow) {
-  font-size: 12px;
+  font-size: 17px;
   line-height: 1.9;
   color: #EAF0F8;
   max-width: 350px;
@@ -728,7 +728,7 @@ button {
 }
 
 .visit-description {
-  font-size: 12px;
+  font-size: 17px;
   line-height: 1.9;
   color: #53617F;
   max-width: 350px;
@@ -753,14 +753,49 @@ button {
   flex-shrink: 0
 }
 
+.icon-arrow,
+.icon-star {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.icon-arrow {
+  width: 14px;
+  height: 14px;
+}
+
+.icon-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-star {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-star svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-arrow svg,
+.icon-star svg {
+  overflow: visible;
+}
+
 .contact-row strong {
-  font-size: 11px
+  font-size: 17px
 }
 
 .contact-row p,
 .contact-row a {
   display: block;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
   color: #53617F;
   margin: 5px 0 0
@@ -891,7 +926,7 @@ button {
 }
 
 .brand-footer .brand-copy strong {
-  font-size: 20px
+  font-size: 24px
 }
 
 .site-footer>p {
@@ -907,7 +942,7 @@ button {
 }
 
 .footer-links a {
-  font-size: 10px;
+  font-size: 14px;
   color: #FFFFFF
 }
 
@@ -920,7 +955,7 @@ button {
   border-top: 1px solid #FFFFFF2B;
   padding-top: 20px;
   margin-top: 14px;
-  font-size: 9px;
+  font-size: 12px;
   color: #B9C5DC
 }
 
@@ -931,7 +966,7 @@ button {
   }
 
   .hero h1 {
-    font-size: 124px
+    font-size: 110px
   }
 
   .hero-visual {
@@ -1009,7 +1044,7 @@ button {
   }
 
   .brand-copy strong {
-    font-size: 21px
+    font-size: 24px
   }
 
   .mobile-menu {
@@ -1039,7 +1074,7 @@ button {
   }
 
   .hero-description {
-    font-size: 12px
+    font-size: 16px
   }
 
   .hero-visual {
@@ -1106,7 +1141,7 @@ button {
 
 @media(max-width:600px) {
   .announcement {
-    font-size: 8px;
+    font-size: 10px;
     letter-spacing: .08em;
     height: 30px
   }
@@ -1126,11 +1161,11 @@ button {
   }
 
   .brand-copy strong {
-    font-size: 19px
+    font-size: 24px
   }
 
   .brand-copy small {
-    font-size: 6px
+    font-size: 8px
   }
 
   .menu-toggle {
@@ -1170,7 +1205,7 @@ button {
   }
 
   .hero-copy .eyebrow {
-    font-size: 8px;
+    font-size: 10px;
     margin-bottom: 20px
   }
 
@@ -1179,9 +1214,10 @@ button {
   }
 
   .hero-description {
-    font-size: 12px;
+    font-size: 17px;
+    line-height: 1.8;
     max-width: 330px;
-    margin: 21px 0
+    margin: 30px 0
   }
 
   .hero-actions {
@@ -1190,9 +1226,9 @@ button {
 
   .button {
     min-height: 48px;
-    padding: 0 16px;
+    padding: 0 25px;
     gap: 16px;
-    font-size: 10px
+    font-size: 17px
   }
 
   .hero-note {
@@ -1217,7 +1253,7 @@ button {
 
   .hero-caption {
     left: 6%;
-    font-size: 8px
+    font-size: 12px
   }
 
   .hero-caption-copy {
@@ -1237,11 +1273,11 @@ button {
   .hero-bottom-label {
     left: 5%;
     bottom: 19px;
-    font-size: 7px
+    font-size: 12px
   }
 
   .section-pad {
-    padding: 72px 5%
+    padding: 20px 5%;
   }
 
   .section-heading {
@@ -1251,12 +1287,12 @@ button {
 
   .section-heading h2,
   .visit-copy h2 {
-    font-size: 57px
+    font-size: 54px
   }
 
   .section-intro {
     margin-top: 20px;
-    font-size: 12px
+    font-size: 17px
   }
 
   .product-grid {
@@ -1269,12 +1305,12 @@ button {
   }
 
   .product-card h3 {
-    font-size: 26px
+    font-size: 32px
   }
 
   .product-card>p {
     min-height: 0;
-    font-size: 12px
+    font-size: 15px
   }
 
   .product-meta {
@@ -1295,7 +1331,7 @@ button {
   }
 
   .story-copy {
-    padding: 55px 7% 65px
+    padding: 40px 7% 50px
   }
 
   .story-copy h2 {
@@ -1303,7 +1339,7 @@ button {
   }
 
   .story-copy>p:not(.eyebrow) {
-    font-size: 12px
+    font-size: 17px
   }
 
   .story-doodle {
@@ -1317,7 +1353,7 @@ button {
   }
 
   .visit-description {
-    font-size: 12px
+    font-size: 17px
   }
 
   .map-wrap {

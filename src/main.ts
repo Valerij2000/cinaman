@@ -17,8 +17,8 @@ const heroArrows = document.querySelectorAll<HTMLButtonElement>('.hero-arrow');
 const heroSlides = [
   {
     eyebrow: 'ТЁПЛЫЕ МОМЕНТЫ НАЧИНАЮТСЯ ЗДЕСЬ',
-    titleFirst: 'Счастье',
-    titleSecond: 'с корицей',
+    titleFirst: 'Пряная',
+    titleSecond: 'радость',
     description: 'Нежное тесто, ароматная корица и мягкая глазурь. Плюс чашечка любимого кофе — и день уже чуточку лучше.',
     caption: 'Только что из печи',
     imageLabel: 'Свежие булочки с корицей и глазурью',
