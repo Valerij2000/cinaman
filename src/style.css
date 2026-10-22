@@ -577,7 +577,7 @@ button {
 }
 
 .product-image-classic {
-  background-image: url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=850&q=82')
+  background-image: url('./product-image-classic.jpg')
 }
 
 .product-image-coffee {
@@ -585,7 +585,7 @@ button {
 }
 
 .product-image-rolls {
-  background-image: url('https://images.unsplash.com/photo-1608198093002-ad4e005484e5?auto=format&fit=crop&w=850&q=82')
+  background-image: url('./product-image-rolls.png')
 }
 
 .product-meta {
