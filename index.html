@@ -137,7 +137,14 @@
     </section>
 
     <section class="story-section" id="story">
-      <div class="story-image" role="img" aria-label="Тёплая свежая выпечка"></div>
+      <div class="story-image">
+        <video class="story-video" aria-label="Тёплая свежая выпечка" playsinline preload="metadata">
+          <source src="/story.mp4" type="video/mp4" />
+        </video>
+        <button class="story-sound-toggle" type="button" aria-label="Выключить звук" aria-pressed="true">
+          Выключить звук
+        </button>
+      </div>
       <div class="story-copy">
         <p class="eyebrow">МАЛЕНЬКИЕ РАДОСТИ ИМЕЮТ ЗНАЧЕНИЕ</p>
         <h2>Побольше<br />тепла.<br /><em>Побольше</em><br />корицы.</h2>

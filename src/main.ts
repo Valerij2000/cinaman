@@ -13,6 +13,8 @@ const heroPhoto = document.querySelector<HTMLElement>('.hero-photo');
 const heroSlideCount = document.querySelector<HTMLElement>('#hero-slide-count');
 const heroSlideCaption = document.querySelector<HTMLElement>('#hero-slide-caption');
 const heroArrows = document.querySelectorAll<HTMLButtonElement>('.hero-arrow');
+const storyVideo = document.querySelector<HTMLVideoElement>('.story-video');
+const storySoundToggle = document.querySelector<HTMLButtonElement>('.story-sound-toggle');
 
 const heroSlides = [
   {
@@ -116,3 +118,69 @@ window.matchMedia('(min-width: 900px)').addEventListener('change', (event) => {
 });
 
 if (year) year.textContent = String(new Date().getFullYear());
+
+if (storyVideo && storySoundToggle) {
+  let storyIsVisible = false;
+  let storySoundEnabled = true;
+
+  const updateStorySoundToggle = (): void => {
+    const soundIsEnabled = !storyVideo.muted;
+    storySoundToggle.textContent = soundIsEnabled ? 'Выключить звук' : 'Включить звук';
+    storySoundToggle.setAttribute('aria-label', soundIsEnabled ? 'Выключить звук' : 'Включить звук');
+    storySoundToggle.setAttribute('aria-pressed', String(soundIsEnabled));
+  };
+
+  const stopStoryVideo = (): void => {
+    storyVideo.pause();
+    storyVideo.muted = true;
+    updateStorySoundToggle();
+  };
+
+  const playStoryVideo = (): void => {
+    if (!storyIsVisible || document.visibilityState === 'hidden') return;
+
+    storyVideo.muted = !storySoundEnabled;
+    updateStorySoundToggle();
+    storyVideo.play().catch((error: unknown) => {
+      if (error instanceof DOMException && error.name === 'NotAllowedError' && !storyVideo.muted) {
+        storySoundEnabled = false;
+        storyVideo.muted = true;
+        updateStorySoundToggle();
+        storyVideo.play().catch((fallbackError: unknown) => {
+          if (!(fallbackError instanceof DOMException && fallbackError.name === 'AbortError')) {
+            console.error('Не удалось запустить видео в секции истории.', fallbackError);
+          }
+        });
+        return;
+      }
+
+      if (!(error instanceof DOMException && error.name === 'AbortError')) {
+        console.error('Не удалось запустить видео в секции истории.', error);
+      }
+    });
+  };
+
+  storySoundToggle.addEventListener('click', () => {
+    storySoundEnabled = storyVideo.muted;
+    storyVideo.muted = !storyVideo.muted;
+    updateStorySoundToggle();
+    playStoryVideo();
+  });
+
+  new IntersectionObserver(([entry]) => {
+    storyIsVisible = entry.isIntersecting;
+    if (storyIsVisible) {
+      playStoryVideo();
+    } else {
+      stopStoryVideo();
+    }
+  }, { threshold: 0.5 }).observe(storyVideo);
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+      stopStoryVideo();
+    } else {
+      playStoryVideo();
+    }
+  });
+}
