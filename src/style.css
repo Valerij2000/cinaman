@@ -120,13 +120,13 @@ button {
 
 .brand-copy strong {
   font-family: var(--serif);
-  font-size: 24px;
+  font-size: 28px;
   letter-spacing: .07em;
   line-height: 1
 }
 
 .brand-copy small {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: .17em;
   font-weight: 700
 }
@@ -140,7 +140,7 @@ button {
 .desktop-nav a,
 .header-phone {
   font-size: 16px;
-  font-weight: 600
+  font-weight: 800
 }
 
 .desktop-nav a {
@@ -166,6 +166,33 @@ button {
 .header-phone {
   border-bottom: 1px solid var(--brown);
   padding: 0 0 5px
+}
+
+.header-pin {
+  display: block;
+  width: 34px;
+  height: 34px;
+}
+
+.desktop-nav .where-to-find {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: #071d49;
+  padding: 12px 26px 12px 18px;
+  border-radius: 10rem;
+  color: #ffffff;
+}
+
+.desktop-nav .where-to-find:hover {
+  color: var(--caramel);
+  transform: translateY(-2px);
+  transition: color ease 0.2s, transform 0.2s;
+}
+
+.desktop-nav .where-to-find:hover:after {
+  right: inherit;
 }
 
 .menu-toggle {
@@ -335,7 +362,8 @@ button {
   gap: 27px;
   font-size: 19px;
   font-weight: 700;
-  transition: background .2s, color .2s, transform .2s
+  transition: background .2s, color .2s, transform .2s;
+  border-radius: 5rem;
 }
 
 .button:hover {
@@ -397,6 +425,10 @@ button {
   inset: 0 0 18px 0%;
   background: #E5F7F6 url('/hero-photo.png') 85%/cover no-repeat;
   filter: saturate(1)
+}
+
+.hero-title-second {
+  color: var(--caramel);
 }
 
 .photo-sticker {
@@ -955,7 +987,7 @@ button {
 }
 
 .brand-footer .brand-copy strong {
-  font-size: 24px
+  font-size: 28px
 }
 
 .site-footer>p {
@@ -971,7 +1003,7 @@ button {
 }
 
 .footer-links a {
-  font-size: 14px;
+  font-size: 17px;
   color: #FFFFFF
 }
 
@@ -984,7 +1016,7 @@ button {
   border-top: 1px solid #FFFFFF2B;
   padding-top: 20px;
   margin-top: 14px;
-  font-size: 12px;
+  font-size: 14px;
   color: #B9C5DC
 }
 
